@@ -33,8 +33,8 @@ function App() {
   return (
     <div className="container">
       <h1 className="title">Stopwatch</h1>
-      <p className="time-label">Time</p>
-      <h2 className="timer">{formatTime(seconds)}</h2>
+      {/* Important: Time label must include colon (:) exactly like "Time: 0:00" */}
+      <h2 className="time-display">Time: {formatTime(seconds)}</h2>
       <div className="button-container">
         <button onClick={handleStartStop}>
           {isRunning ? "Stop" : "Start"}
