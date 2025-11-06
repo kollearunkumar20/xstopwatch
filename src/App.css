@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -13,18 +13,13 @@ body {
 .title {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #333;
+  color: #222;
 }
 
-.time-label {
-  font-size: 20px;
-  margin: 0;
-  color: #555;
-}
-
-.timer {
-  font-size: 48px;
-  margin: 10px 0;
+/* Matches exact test expectations for the Time line */
+.time-display {
+  font-size: 36px;
+  margin: 10px 0 20px 0;
   color: #000;
 }
 
@@ -36,11 +31,12 @@ button {
   margin: 5px;
   padding: 10px 25px;
   font-size: 16px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
   background-color: #007bff;
   color: white;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
