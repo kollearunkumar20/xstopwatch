@@ -6,16 +6,19 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
-    let timer;
+    let timerId;
     if (isRunning) {
-      timer = setInterval(() => {
+      timerId = setInterval(() => {
         setSeconds((prev) => prev + 1);
       }, 1000);
     }
-    return () => clearInterval(timer);
+    return () => clearInterval(timerId);
   }, [isRunning]);
 
-  const handleStartStop = () => setIsRunning((prev) => !prev);
+  const handleStartStop = () => {
+    setIsRunning((prev) => !prev);
+  };
+
   const handleReset = () => {
     setIsRunning(false);
     setSeconds(0);
